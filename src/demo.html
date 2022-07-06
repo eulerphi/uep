@@ -21,33 +21,24 @@
                 <ellipse cx="50" cy="35" rx="2.5" ry="2.5" />
                 <text x="43.5" y="23" fill="black">m</text>
 
-                <image id="hand" href="hand.svg" x="-1.5" height="16" width="16" />
+                <image id="hand" href="media/imgs/hand.svg" x="-1.5" height="16" width="16" />
             </svg>
         </div>
 
         <div id="side">
+            <div id="countdown_container">
+                <div id="countdown"></div>
+            </div>
             <div id="head_container">
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <rect width="24" height="24" style="fill: none; stroke:black; stroke-width: 0.25;"></rect>
-                    <image id="head" href="head.svg" />
+                    <image id="head" href="media/imgs/head.svg" />
                 </svg>
             </div>
-            <div id="controls_container">
-                <div id="controls">
-                    <button>
-                        repeat
-                    </button>
-                    <button>
-                        too slow
-                    </button>
-                    <button>
-                        too loud
-                    </button>
-                    <button>
-                        correct
-                    </button>
-                </div>
-                <progress id="countdown" value="0.25"></progress>
+            <div id="controls">
+                <audio id="player">
+                    <source id="player_source" type="audio/mp4" />
+                </audio>
             </div>
         </div>
     </main>
