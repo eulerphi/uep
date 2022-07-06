@@ -2,20 +2,27 @@
 
 let hand = SVG('#hand');
 
+const HandXOffset = -6.375;
+const HandYOffset = -0.5;
+
+function getHandPos() {
+    return [hand.x() - HandXOffset, hand.y() - HandYOffset];
+}
+
 function moveHand(x, y) {
-    hand.move(x - 6.375, y - 0.5);
+    hand.move(x + HandXOffset, y + HandYOffset);
 }
 
 function animateHand(x, y, duration) {
-    let startX = hand.x();
-    let startY = hand.y();
-    let dX = x - hand.x();
-    let dY = y - hand.y();
+    let start = getHandPos();
+    console.log(`start: ${start[0]}, ${start[1]}`);
 
+    let dX = x - start[0];
+    let dY = y - start[1];
     console.log(`delta: ${dX}, ${dY}`);
 
     hand.animate(duration, '<>').during(function (pos, morph, eased) {
-        moveHand(startX + (pos * dX), startY + (pos * dY));
+        moveHand(start[0] + (pos * dX), start[1] + (pos * dY));
     });
 }
 

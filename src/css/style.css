@@ -1,0 +1,54 @@
+main {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 66.66% 33.33%;
+}
+
+#content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#instruction {
+    max-width: 50%;
+}
+
+#side {
+    display: grid;
+    grid-template-rows: 50% 50%;
+}
+
+#controls button {
+    height: 25%;
+}
+
+.btn_correct {
+    background-image: url('correct.svg');
+}
+
+#controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#controls_container {
+    width: 100%;
+    display: grid;
+    grid-template-rows: 95% 5%;
+}
+
+#head_container {
+    display: flex;
+    justify-content: center;
+}
+
+#head_container svg {
+    width: 70%;
+}
+
+#countdown {
+    width: 100%;
+}
