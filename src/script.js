@@ -116,8 +116,8 @@ function runStep() {
         hideElement('#instruction');
         resetHand();
         addButton("start", function () {
-            // ++step;
-            step = 9;
+            ++step;
+            // step = 9;
             runStep();
         });
     }
