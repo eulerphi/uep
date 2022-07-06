@@ -33,7 +33,12 @@ function animateHand(x, y, duration) {
         });
 }
 
-document.querySelector('main').style.height = `${window.innerHeight}px`;
+function resize() {
+    document.querySelector('main').style.height = `${window.innerHeight}px`;
+}
+
+window.addEventListener('resize', resize);
+resize();
 
 let step = 0;
 
@@ -111,7 +116,8 @@ function runStep() {
         hideElement('#instruction');
         resetHand();
         addButton("start", function () {
-            ++step;
+            // ++step;
+            step = 9;
             runStep();
         });
     }
@@ -173,7 +179,9 @@ function runStep() {
         playAudio('S2.1.b.m4a');
     }
     else if (step === 11) {
-        playAudio('S2.1.d.m4a');
+        // playAudio('S2.1.d.m4a');
+        ++step;
+        runStep();
     }
     else if (step === 12) {
         playAudio('S2.1.e.m4a');
@@ -182,7 +190,9 @@ function runStep() {
         playAudio('S2.2.a.m4a');
     }
     else if (step === 14) {
-        playAudio('S2.2.b.m4a');
+        // playAudio('S2.2.b.m4a');
+        ++step;
+        runStep();
     }
     else if (step === 15) {
         playAudio('S2.2.c.m4a');
@@ -218,7 +228,7 @@ function runStep() {
         playAudio('S2.2.2.m4a');
     }
     else if (step === 1700201) {
-        step = 15;
+        step = 16;
         runStep();
     }
     else if (step === 1700300) {
@@ -227,7 +237,7 @@ function runStep() {
         playAudio('S2.2.3.m4a');
     }
     else if (step === 1700301) {
-        step = 15;
+        step = 16;
         runStep();
     }
     else if (step === 1700400) {
@@ -236,13 +246,15 @@ function runStep() {
         playAudio('S2.2.4.m4a');
     }
     else if (step === 1700401) {
-        step = 15;
+        step = 16;
         runStep();
     }
     else if (step === 18) {
         clearButtons();
-        step = 0;
-        runStep();
+        addButton("restart", function () {
+            step = 1;
+            runStep();
+        });
     }
 };
 
