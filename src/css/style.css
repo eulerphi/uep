@@ -123,3 +123,12 @@ main {
     height: 50%;
     background-color: #3C6E71;
 }
+
+#vid {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 240px;
+    position: fixed;
+    left: 25px;
+    bottom: 25px;
+}

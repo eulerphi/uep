@@ -1,0 +1,25 @@
+body {
+    background-color: #EBEBEB;
+}
+
+p {
+    font-size: 128px;
+    width: fit-content;
+    margin: auto;
+}
+
+#container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto max-content auto;
+}
+
+
+.br {
+    display: block;
+    margin-bottom: 2em;
+}
+
+main {
+    width: 100%;
+}
